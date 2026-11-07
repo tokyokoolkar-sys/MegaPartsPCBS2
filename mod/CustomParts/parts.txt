@@ -1,0 +1,20 @@
+# PCBS2 CustomParts. One custom part per line, fields separated by |
+#  1 part ID (as in the part XML)
+#  2 new Asset Path key (the XML's Asset Path)
+#  3 base key: stock prefab whose game behaviour (slots, connectors, scripts) the part reuses
+#  4 bundle file in Mods\CustomParts | 5 prefab name in the bundle
+#  6 real shroud length in mm: stock card/custom card (gives the game's units per mm, then the model's scale);
+#    or @<units per metre>/<custom card mm> for a fixed game scale (5.084);
+#    custom size "bracket" scales the model so its bracket is the standard 120.02 mm
+#  7 shroud: stock mesh=model node (their longest side is the length in field 6)
+#  8 bracket: stock mesh=model node (which end the bracket is on; its outer face lines up)
+#  9 top: stock object=model node (power connector; which way is up)
+# 10 board: stock mesh=model node (PCB / PCIe finger; its bottom edge and plane line up, so the card sits in the slot);
+#    *=* for a merged-body base: whole-card bottoms (bracket tab) and back faces line up
+# 11 stock mesh-name prefixes to hide
+# 12 fans: model node=stock fan, ...   13 moves: model node=stock object, ...
+# 14 optional fine offset in mm, along the card: +toward bracket  +up (power-connector edge)  +toward the fans
+# 15 optional extra rotation in degrees about the card's length, height and thickness axes
+#    Saved changes apply in-game within a second; the F8 tuner adjusts 14 and 15 in-game and F9 saves them.
+GPU_CustomParts_RTX5090FE | Prefabs/Custom/GPU_RTX5090FE | Prefabs/GPU/NVidia/GPU_NVIDIA_GEFORCE_RTX_4090 | rtx5090fe | RTX5090FE | 304/304 | 4090_Body=main frame | 4090_Chassis_Bracket=io plate | 16 pin power connector=power port | 4090_PCB=pcie | 4090_, Circle, Cylinder, Plane, Test_ | Blade_A=4090_Fan_01, Blade_B=4090_Fan_02 | power port=16 pin power connector | -0.5 -1 -6
+GPU_CustomParts_ASUSPRIMERTX5080 | Prefabs/Custom/GPU_ASUSPRIMERTX5080 | Prefabs/GPU/MSI/GPU_MSI_GeForce_RTX_5070_12G_INSPIRE_3X | asusprimertx5080 | ASUSPRIMERTX5080 | @5.084/bracket | MSI_GeForce_RTX_5070_12G_INSPIRE_3X=ASUS PRIME RTX 5080 [By:Unzari] | HDMI=Plane.021 | 16 pin power connector=Cube | *=* | MSI_, Fan | Circle.001=Fan1, Circle=Fan2, Circle.005=Fan3 | Cube=16 pin power connector

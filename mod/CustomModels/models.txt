@@ -1,0 +1,3 @@
+# bundle | prefab in bundle | part root name (part ID; trailing * = prefix) | stock mesh prefixes to hide (comma-separated) | yaw pitch roll [x y z offset] | fans: model=stock, ... | moves: model=stock, ...
+rtx4090fe | RTX4090FE | GPU_NVIDIA_13 | 4090_, Circle, Cylinder, Plane, Test_ | 184 179 0  0.413 -0.006 -0.82 | Fan_Front=4090_Fan_01, Fan_Back=4090_Fan_02 | Pin_Connector=16 pin power connector
+rtx5090fe | RTX5090FE | AirCooledGPU_Custom_75603 | 4090_, Circle, Cylinder, Plane, Test_ | -180 90 0  0 0.042 0.012 | Blade_A=4090_Fan_01, Blade_B=4090_Fan_02 | power port=16 pin power connector

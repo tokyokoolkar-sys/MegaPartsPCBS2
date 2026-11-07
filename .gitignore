@@ -1,0 +1,22 @@
+unity/ModelBundles/Library/
+unity/ModelBundles/Logs/
+unity/ModelBundles/Temp/
+unity/ModelBundles/UserSettings/
+unity/ModelBundles/*.log
+mod/**/bin/
+mod/**/obj/
+downloads/
+removed/
+out/
+.relay/
+__pycache__/
+
+# Not redistributable: third-party 3D models, game data and generated part files
+unity/ModelBundles/Assets/Models/
+data/
+mod/CustomParts/parts/
+*.blend
+*.glb
+*.dll
+*.bundle
+
